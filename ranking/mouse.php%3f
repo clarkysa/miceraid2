@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>MiceRaid Ranking - </title>
+<meta name="description" content>
+<meta name="viewport" content="user-scalable=no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, width=device-width">
+<meta name="theme-color" content="#222222">
+<meta name="msapplication-navbutton-color" content="#222222">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="favicon.ico"/>
+<script type="text/javascript" async src="http://www.google-analytics.com/ga.js"></script>
+<link rel="stylesheet" type="text/css" href="http://forum.supermice.net/css/1.25.15.css">
+<script src="http://forum.supermice.net/js/1.25.15.js"></script>
+<script>
+			var init = function() {},
+			    DUREE_DESACTIVATION_DEFAUT = 1000,
+			    PREFIXE_CLE_SAUVEGARDE = "sauv_",
+			    SUFFIXE_CLE_SAUVEGARDE_EXPIRATION = "_expiration",
+			    DELAI_EXPIRATION_SAUVEGARDE_MINUTES = 1000;
+			jQuery(window).load(function() {
+			    ajusterSpansEtireHauteur();
+			    initBarresProgression();
+			    gestionAncre()
+			});
+		</script>
+<style>
+			.log-text { font-size: 12px; }
+			.left { float: left; width: 270px; }
+			.right { /* float: right; */ margin-left: 280px; }
+			bv { color: #2F7FCC; }
+			bl { color: #6C77C1; }
+			j { color: #BABD2F; }
+			n { color: #C2C2DA; }
+			vp { color: #2ECF73; }
+			rose { color: #ED67EA; }
+			v { color: #009D9D; }
+			adm { color: #EB1D51; }
+      fc { color: #E68D43; }
+		</style>
+</head>
+<body onload="chargerPage();">
+<div id="contenant-corps-et-footer">
+<div id="popup"></div>
+<div class="modal hide fade ltr" id="popup_choix_langue">
+<div class="modal-header">
+<a class="close" data-dismiss="modal">×</a>
+<h3>Language</h3>
+</div>
+<div class="modal-body">
+<a href="#" class="btn btn-info bouton-langue" onclick="jQuery('#langue_principale').val('en');jQuery('#formulaire_langue').submit();" title="English">
+<img src="/img/pays/gb.png" class="img16"/>
+</a>
+</div>
+<div class="modal-footer">
+<a class="btn" data-dismiss="modal">Close</a>
+</div>
+</div>
+<div id="barre_navigation" class="navbar navbar-fixed-top navbar-inverse">
+<div class="navbar-inner">
+<div class="container-fluid menu-principal ltr">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a class="brand lien-titre " href="/index">MiceRaid</a>
+<div class="nav-collapse collapse">
+<ul class="nav  ltr">
+<li>
+<a class="element-menu-principal" href="http://forum.supermice.net">Forums</a>
+</li>
+<li class="active">
+<a class="element-menu-principal" href="http://www.supermice.net/ranking">Ranking</a>
+</li>
+</ul>
+<ul class="nav pull-right ltr">
+<li class="dropdown">
+<a href="javascript:(0)">
+</a>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<div class="container-fluid menu-secondaire">
+<div class="row-fluid">
+<div class="span12">
+<div class="barre-navigation  ltr">
+<a class href="javascript:void(0)">
+'s Profile
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="espace_barre_navigation" class="hidden-phone hidden-tablet"></div>
+<script type="text/javascript">
+        majTailleEspaceNavbar();
+      </script>
+<div id="corps" class="corps clear container">
+<div id="corps" class="corps clear container">
+<div class="row">
+<div class="span12">
+<div class="cadre cadre-relief cadre-sujet ltr">
+<table class="table-cadre table-cadre-centree">
+<tbody>
+<tr>
+<td rowspan="4"></td>
+<td class="table-cadre-cellule-principale">
+<h3 class="lien-blanc" href="javascript:void(0)">MiceRaid Ranking » 's Profile</h3>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="clear"></div>
+<div class="left"> 
+<div class="span3">
+<div class="cadre cadre-relief cadre-sujet ltr">
+<table class="table-cadre table-cadre-centree">
+<tbody>
+<tr>
+<td rowspan="4"></td>
+<td class="table-cadre-cellule-principale">
+<center><v><h4 class="lien-blanc"><v></v></v></h4></center>
+<p align="center">
+<v><i>« <a href="javascript:void(0)"><v></v></a></a> »</i></v><br><br>
+<img src="http://forum.supermice.net/avatars/0/.jpg">
+</p>
+<div class="cadre cadre-presentation">
+<center><h5 class="lien-blanc">Information</h5></center>
+<a href="http://forum.supermice.net/new-dialog?ad=" target="_blank"><img src="http://forum.supermice.net/img/icones/16/messagerie1.png"> <b>Send Message</b></a><br>
+<img src="http://www.supermice.net/ranking/icon/logo_41x18.png" class="img18"> <b>Registration :</b> 01.01.1970<br>
+<img src="http://api.micetigri.fr/img/xp_img.png"> <b>Level :</b> <br>
+<img src="https://vignette1.wikia.nocookie.net/transformice/images/5/51/Tribe_house_map.png/revision/latest/scale-to-width-down/21?cb=20160218065106" class="img16"> <b>Tribe :</b> <br>
+<img src="http://api.micetigri.fr/img/titre.png"> <b>Karma :</b> <br>
+<img src="http://api.micetigri.fr/img/coeur.png"> <b>Gender :</b> <img src="http://forum.supermice.net/img/icones/garcon.png" class="img16"> Male </div>
+<br>
+<div class="cadre cadre-presentation">
+<center><h5 class="lien-blanc">Badges</h5></center>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+
+<div class="clear"></div>
+<div class="right"> 
+<div class="span9.5">
+<div class="cadre cadre-relief cadre-sujet ltr">
+<table class="table-cadre table-cadre-centree">
+<tbody>
+<tr>
+<td rowspan="4"></td>
+<td class="table-cadre-cellule-principale">
+<h3 class="lien-blanc" href="javascript:void(0)" id="logToggle" data-vo="false">General Stats</h3>
+<p class="cadre-sujet-titre log-text" id="logSection">
+<div class="cadre cadre-presentation">
+<table class="table table-sm">
+<thead>
+<tr>
+<th>#</th>
+<th>Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/fromage.png"> Cheese gathered</th>
+<th></th>
+</tr>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/first.png"> Cheese gathered first</th>
+<th></th>
+</tr>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/bootcamp.png"> Bootcamp</th>
+<th></th>
+</tr>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/parties.png"> Rounds played</th>
+<th></th>
+</tr>
+</tbody>
+</table>
+</div>
+</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="span9.5">
+<div class="cadre cadre-relief cadre-sujet ltr">
+<table class="table-cadre table-cadre-centree">
+<tbody>
+<tr>
+<td rowspan="4"></td>
+<td class="table-cadre-cellule-principale">
+<h3 class="lien-blanc" href="javascript:void(0)" id="logToggle" data-vo="false">Shaman Stats</h3>
+<p class="cadre-sujet-titre log-text" id="logSection">
+<div class="cadre cadre-presentation">
+<table class="table table-sm">
+<thead>
+<tr>
+<th>#</th>
+<th>Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/shaman.png"> Easy</th>
+<th></th>
+</tr>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/difficile.png"> Hard</th>
+<th></th>
+</tr>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/divine.png"> Divine</th>
+<th></th>
+</tr>
+<tr>
+<th scope="row"><img src="http://api.micetigri.fr/img/fromage.png">Cheese gathered</th>
+<th></th>
+</tr>
+</tbody>
+</table>
+</div>
+</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</html>
