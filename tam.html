@@ -1,0 +1,84 @@
+﻿
+<html>
+	<head>
+		<script type="text/javascript" src="http://www.micegirl.com/browserdetect2.js"></script>
+		<link rel="stylesheet" href="http://www.heromice.com/games/loading.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="http://www.heromice.com/stylenew.css" type="text/css" media="screen" />
+	</head>
+
+	<body style="background-color: #6A7495;">
+<script type="text/javascript">
+	var langue = navigator.language;
+        if (!langue) {
+                langue = navigator.browserLanguage;
+        }
+        langue = langue.substr(0, 2);
+	
+	function positionMolette(X, Y) {
+	}
+	function activerMolette(OUI, HAUT) {
+	}
+	function recupLangue() {
+		return langue;
+	}
+	function pleinEcran(OUI) {
+		if (OUI) {
+			window.open("http://www.supermice.net", "_blank");
+			
+		} else {
+			document.getElementById("transformice").style.position="static";
+			document.getElementById("transformice").style.width="800px";
+			document.getElementById("transformice").style.height="600px";
+			document.getElementById("WidgetTwitter").style.display="inline";	
+
+
+		}
+	}
+	function cancelEvent(e) {
+		if (navigator.userAgent.indexOf("hrome") != -1) {
+			document.getElementById("swf2").x_moletteTransformice(e.wheelDelta);
+		}
+		e = e ? e : window.event;
+		if(e.stopPropagation)
+			e.stopPropagation();
+		if(e.preventDefault)
+			e.preventDefault();
+		e.cancelBubble = true;
+		e.cancel = true;
+		e.returnValue = false;
+		return false;
+        }
+        function hookEvent(element, eventName, callback) {
+		if (element.addEventListener) {
+                        if (eventName == 'mousewheel') {
+				element.addEventListener('DOMMouseScroll', callback, false);
+			}
+			element.addEventListener(eventName, callback, false);
+                } else if (element.attachEvent) {
+			element.attachEvent("on" + eventName, callback);
+        	}
+	}
+
+</script>
+		<div class="jeus" style="width:800px;height:600px;">
+		<div id="transformice" style="z-index: 1001; width:100%;height:100%;">
+		<object id="swf1" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="100%" height="100%" id="Transformice" align="middle">
+		<param name="allowScriptAccess" value="always" />
+		<param name="movie" value="a.swf" />
+		<param name="menu" value="true" />
+		<param name="quality" value="high" />
+		<param name="bgcolor" value="#6A7495" />
+		<embed id="swf2" src="a.swf" wmode="direct" menu="true" quality="high" bgcolor="#6A7495" width="100%" height="100%" name="Transformice" align="middle" swLiveConnect="true" allowFullScreen="true" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</object>
+	</div>		<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+			function hide(id){
+				var divObject=document.getElementById(id);
+				divObject.style.display="none";
+			}
+		</SCRIPT>
+		</div>
+	<script>
+		hookEvent(document.getElementById("transformice"), "mousewheel", cancelEvent);
+	</script>
+	</body>
+</html>
